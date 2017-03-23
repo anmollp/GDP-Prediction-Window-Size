@@ -1,0 +1,20 @@
+The dataset contains 62 years of GDP data of India. Total of 7 attributes are used for this study. Each attribute is a Sector Share contribution. The sectors are Agriculture and Allied Servies, Agriculture, Industry, Mining and Quarrying, Manufactoring and Services.
+
+--> ML Approaches
+
+The dataset is split in train and test datasets. 20% of the data is set for validation. 10-fold cross validation technique is used for training the algorithms.
+The ML approaches tested for this dataset are Linear Regression (LR) , Support Vector Machines (SVM), k-Nearest Neighbours (kNN). The algorithms were evaluated using RMSE and R-squared metrics. RMSE will give a gross idea of how wrong all predictions are (0 is perfect) and R-squared will give an idea of how well the model has fit the data.(1 is perfect, 0 is worst).
+LR: 
+	For linear regression, RMSE value of 1207.367 and Rsquared value of 0.9999985 was obtained.
+SVM:
+	Kernel used was the Radial Basis Function. The final values used for the model were sigma = 5.701345 and C = 1. RMSE value of 512471.7 and Rsquared value of 0.9630921 was obtained.
+kNN :
+	The optimal k value which was selected for this model was k = 5. RMSE value of 165545.8 and Rsquared value of 0.9949018 was obtained.
+
+These prelimnary training indicates that all algorithms have fit the data well which is indicated by a high R-squared value. But Linear Regression performs the best with least RMSE value. The reason why LR performed the best is because the attributes are highly correlated and in linear fashion which can be seen in Scatterplot and Correlation plot. [ Data Viz Section ] Comparision of the algorithms is depicted in the figure.
+
+Thus, LR was used for final validation of the model as it performed best.
+Multiple Regression was used to validate the model with GDP being the y variable and the 6 attributes being x1,x2,x3 and so on.
+	Eqn : 
+	formula = GDP ~ AAS + Agri + Ind +`Mining&Q` + Manu + Services
+The final RMSE value obtained after validation was 1701.28. This signifies that the model has performed well.
